@@ -1,0 +1,106 @@
+package androidx.compose.material3;
+
+import androidx.compose.animation.core.AnimationSpec;
+import androidx.compose.ui.node.ModifierNodeElement;
+import androidx.compose.ui.platform.InspectorInfo;
+import com.google.firebase.remoteconfig.RemoteConfigConstants;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+/* compiled from: TimePicker.kt */
+@Metadata(d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0081\b\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B-\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\u0004\b\f\u0010\rJ\b\u0010\u000f\u001a\u00020\u0002H\u0016J\u0010\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0002H\u0016J\f\u0010\u0013\u001a\u00020\u0011*\u00020\u0014H\u0016J\t\u0010\u0015\u001a\u00020\u0004HÂ\u0003J\t\u0010\u0016\u001a\u00020\u0006HÂ\u0003J\u0010\u0010\u0017\u001a\u00020\bHÂ\u0003¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u000b0\nHÂ\u0003J>\u0010\u001b\u001a\u00020\u00002\b\b\u0002\u0010\u0003\u001a\u00020\u00042\b\b\u0002\u0010\u0005\u001a\u00020\u00062\b\b\u0002\u0010\u0007\u001a\u00020\b2\u000e\b\u0002\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\nHÆ\u0001¢\u0006\u0004\b\u001c\u0010\u001dJ\u0013\u0010\u001e\u001a\u00020\u00062\b\u0010\u001f\u001a\u0004\u0018\u00010 HÖ\u0003J\t\u0010!\u001a\u00020\"HÖ\u0001J\t\u0010#\u001a\u00020$HÖ\u0001R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u00020\bX\u0082\u0004¢\u0006\u0004\n\u0002\u0010\u000eR\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\nX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006%"}, d2 = {"Landroidx/compose/material3/ClockDialModifier;", "Landroidx/compose/ui/node/ModifierNodeElement;", "Landroidx/compose/material3/ClockDialNode;", RemoteConfigConstants.ResponseFieldKey.STATE, "Landroidx/compose/material3/AnalogTimePickerState;", "autoSwitchToMinute", "", "selection", "Landroidx/compose/material3/TimePickerSelectionMode;", "animationSpec", "Landroidx/compose/animation/core/AnimationSpec;", "", "<init>", "(Landroidx/compose/material3/AnalogTimePickerState;ZILandroidx/compose/animation/core/AnimationSpec;Lkotlin/jvm/internal/DefaultConstructorMarker;)V", "I", "create", "update", "", "node", "inspectableProperties", "Landroidx/compose/ui/platform/InspectorInfo;", "component1", "component2", "component3", "component3-yecRtBI", "()I", "component4", "copy", "copy-JwYzU44", "(Landroidx/compose/material3/AnalogTimePickerState;ZILandroidx/compose/animation/core/AnimationSpec;)Landroidx/compose/material3/ClockDialModifier;", "equals", "other", "", "hashCode", "", "toString", "", "material3"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class ClockDialModifier extends ModifierNodeElement<ClockDialNode> {
+    public static final int $stable = 0;
+    private final AnimationSpec<Float> animationSpec;
+    private final boolean autoSwitchToMinute;
+    private final int selection;
+    private final AnalogTimePickerState state;
+
+    public /* synthetic */ ClockDialModifier(AnalogTimePickerState analogTimePickerState, boolean z, int i, AnimationSpec animationSpec, DefaultConstructorMarker defaultConstructorMarker) {
+        this(analogTimePickerState, z, i, animationSpec);
+    }
+
+    private final AnalogTimePickerState component1() {
+        return this.state;
+    }
+
+    private final boolean component2() {
+        return this.autoSwitchToMinute;
+    }
+
+    /* renamed from: component3-yecRtBI  reason: not valid java name */
+    private final int m1837component3yecRtBI() {
+        return this.selection;
+    }
+
+    private final AnimationSpec<Float> component4() {
+        return this.animationSpec;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* renamed from: copy-JwYzU44$default  reason: not valid java name */
+    public static /* synthetic */ ClockDialModifier m1838copyJwYzU44$default(ClockDialModifier clockDialModifier, AnalogTimePickerState analogTimePickerState, boolean z, int i, AnimationSpec animationSpec, int i2, Object obj) {
+        if ((i2 & 1) != 0) {
+            analogTimePickerState = clockDialModifier.state;
+        }
+        if ((i2 & 2) != 0) {
+            z = clockDialModifier.autoSwitchToMinute;
+        }
+        if ((i2 & 4) != 0) {
+            i = clockDialModifier.selection;
+        }
+        if ((i2 & 8) != 0) {
+            animationSpec = clockDialModifier.animationSpec;
+        }
+        return clockDialModifier.m1839copyJwYzU44(analogTimePickerState, z, i, animationSpec);
+    }
+
+    /* renamed from: copy-JwYzU44  reason: not valid java name */
+    public final ClockDialModifier m1839copyJwYzU44(AnalogTimePickerState analogTimePickerState, boolean z, int i, AnimationSpec<Float> animationSpec) {
+        return new ClockDialModifier(analogTimePickerState, z, i, animationSpec, null);
+    }
+
+    @Override // androidx.compose.ui.node.ModifierNodeElement
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof ClockDialModifier) {
+            ClockDialModifier clockDialModifier = (ClockDialModifier) obj;
+            return Intrinsics.areEqual(this.state, clockDialModifier.state) && this.autoSwitchToMinute == clockDialModifier.autoSwitchToMinute && TimePickerSelectionMode.m2778equalsimpl0(this.selection, clockDialModifier.selection) && Intrinsics.areEqual(this.animationSpec, clockDialModifier.animationSpec);
+        }
+        return false;
+    }
+
+    @Override // androidx.compose.ui.node.ModifierNodeElement
+    public int hashCode() {
+        return (((((this.state.hashCode() * 31) + Boolean.hashCode(this.autoSwitchToMinute)) * 31) + TimePickerSelectionMode.m2779hashCodeimpl(this.selection)) * 31) + this.animationSpec.hashCode();
+    }
+
+    @Override // androidx.compose.ui.node.ModifierNodeElement
+    public void inspectableProperties(InspectorInfo inspectorInfo) {
+    }
+
+    public String toString() {
+        return "ClockDialModifier(state=" + this.state + ", autoSwitchToMinute=" + this.autoSwitchToMinute + ", selection=" + ((Object) TimePickerSelectionMode.m2780toStringimpl(this.selection)) + ", animationSpec=" + this.animationSpec + ')';
+    }
+
+    private ClockDialModifier(AnalogTimePickerState analogTimePickerState, boolean z, int i, AnimationSpec<Float> animationSpec) {
+        this.state = analogTimePickerState;
+        this.autoSwitchToMinute = z;
+        this.selection = i;
+        this.animationSpec = animationSpec;
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // androidx.compose.ui.node.ModifierNodeElement
+    public ClockDialNode create() {
+        return new ClockDialNode(this.state, this.autoSwitchToMinute, this.selection, this.animationSpec, null);
+    }
+
+    @Override // androidx.compose.ui.node.ModifierNodeElement
+    public void update(ClockDialNode clockDialNode) {
+        clockDialNode.m1843updateNodeJwYzU44(this.state, this.autoSwitchToMinute, this.selection, this.animationSpec);
+    }
+}
